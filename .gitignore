@@ -1,0 +1,32 @@
+
+# Ignore build and compiled files
+*.class
+*.war
+*.jar
+/target/
+/dist/
+/bin/
+/build/
+
+# Ignore IDE settings
+/.idea/
+/.vscode/
+/.settings/
+/.classpath
+/.project
+/nbproject/
+
+# Ignore logs and config files
+*.log
+*.out
+*.err
+/config.properties
+*.env
+
+# Ignore dependencies
+/lib/
+/node_modules/
+
+# Ignore system-specific files
+.DS_Store
+Thumbs.db

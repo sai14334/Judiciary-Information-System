@@ -5,16 +5,20 @@
 --%>
 
 <%@page import="java.util.List"%>
-<%@page import="DaoClasses.LawyerPaymentDao"%>
+<%@page import="com.uprooters.daoclasses.LawyerPaymentDao"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Check Lawyer Payment</title>
+                        <link href="CSS/forms.css" rel="stylesheet" type="text/css">
+
     </head>
     <body>
-        <h2>List of Available Lawyers</h2>
+         <h2  style="font-size: 28px;font-weight: bold;margin-bottom: 20px;text-align: center;">Lawyer Payment Details</h2>
+        <div class="form-container">
+        <h2 class="form-header">List of Available Lawyers</h2>
         <%      if(request.getAttribute("error") != null){
                     out.println("<h2 style='color:red;'>"+request.getAttribute("error")+"</h2>");
             }
@@ -42,5 +46,6 @@
             <%} else { 
                     out.println("<h2 style='color:red;'>No Lawyer Exist</h2>");
                }%>
+        </div>
     </body>
 </html>

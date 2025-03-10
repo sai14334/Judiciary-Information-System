@@ -4,8 +4,8 @@
     Author     : rguktrkvalley
 --%>
 
+<%@page import="com.uprooters.beans.Cases"%>
 <%@page import="java.util.List"%>
-<%@page import="Beans.Cases"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -97,17 +97,7 @@
             %>
             </tbody>
             
-            <!-- 
             
-                if(jStatus){
-                       
-                         out.println("<td><a href='#' onclick='alert(\"Judgment already passed for this case.\")' style='color:gray;  cursor:default;'>Judgment</a></td>");
-                    }
-                    else{
-                    out.println("<td><a href='PassJudgement.jsp?caseid="+listcase.get(i).getCaseId()+"'>Judgement</a></td>");
-                    }
-                
-            -->
         </table>
     </body>
 </html>

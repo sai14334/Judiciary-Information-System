@@ -10,10 +10,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Update Case Details</title>
+        <link href="CSS/forms.css" rel="stylesheet" type="text/css">
+
     </head>
     <body>
+        <div class="form-container">
         <!--<a href="viewallcases">Back to Caseslist</a>-->
-        <h2>Update Case Details</h2>
+        <h2 class="form-header">Update Case Details</h2>
         <%
             String caseid = request.getParameter("caseid");
             String success=null;
@@ -51,7 +54,7 @@
             
             <input type="submit" value="Update Case"/>
         </form>
-
+        </div>
         <script>
             // Function to toggle End Date field visibility
 //            function toggleDetails() {

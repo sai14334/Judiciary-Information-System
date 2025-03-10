@@ -4,22 +4,25 @@
     Author     : rguktrkvalley
 --%>
 
-<%@page import="Beans.Judge"%>
-<%@page import="Beans.Lawyer"%>
+<%@page import="com.uprooters.beans.Judge"%>
+<%@page import="com.uprooters.beans.Lawyer"%>
+<%@page import="com.uprooters.daoclasses.GetLawyersJudgeDao"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.sql.ResultSet" %>
 <%@page import="java.util.List"%>
-<%@page import="DaoClasses.GetLawyersJudgeDao"%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>ADD Lawyer Judge</title>
-        
+               <link href="CSS/forms.css" rel="stylesheet" type="text/css">
+ 
     </head>
     <body>
-        <h2>Assign Lawyer and Judge</h2>
+        <div class="form-container">
+        <h2 class="form-header">Assign Lawyer and Judge</h2>
         <%  String caseId = request.getParameter("caseId");
             GetLawyersJudgeDao getdetails = new GetLawyersJudgeDao();
             ResultSet rsl = getdetails.getLawyerDetails();
@@ -104,6 +107,9 @@
            <input type ="date" name="hearingdate"><br/>
            <input type="submit" value="Submit">
         </form>
+        </div>
+           
+           
         <script>
             function setLawyerName() {
                 var select = document.getElementById("lawyerDropdown");

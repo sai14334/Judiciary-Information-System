@@ -10,8 +10,11 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Payment Page</title>
+                <link href="CSS/forms.css" rel="stylesheet" type="text/css">
+
     </head>
     <body>
+         <div class="form-container">
         <% 
            String NotUpdated = null;
            if(request.getAttribute("NotUpdated")!=null){
@@ -36,18 +39,19 @@
        <%
            if(session.getAttribute("username") !=null){
        %>
-        <h2>Make Payment</h2>
-        <h3 style="color:orange;">Amount: &#8377;100 Per Case</h3>
+        <h2 class="form-header">Make Payment</h2>
+        <h3 style="color:orange;" class="form-header">Amount: &#8377;100 Per Case</h3>
         <form action="payment" method="post">
             
             <input type="hidden" name="amount" value="100.00"/> <!-- Set the required amount -->
             <input type="hidden" name="paymentStatus" id="paymentStatus"/>
 
-            <button type="button" onclick="processPayment()">Pay Now</button>
+            <input type="submit" value="Pay Now" onclick="processPayment()"/>
         </form>
         <%} else{
                    out.println("<h2 style='color:red;'>Session Expired</h2>");
                 }%>
+         </div>
         <script>
             function processPayment() {
                 // Simulate payment status (success/failure). In real case, integrate payment gateway.

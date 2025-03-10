@@ -11,10 +11,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Remove USer</title>
               
+        <link href="CSS/forms.css" rel="stylesheet" type="text/css">
 
     </head>
     <body>
-        
+        <div class="form-container">
         <%
            String  failed = null;
            if(request.getAttribute("failed")!=null){
@@ -22,7 +23,7 @@
        %>
        <h2 style="color:red;"><%=failed%></h2>
        <%}%>
-       <h3>Enter Details of User To remove</h3>
+       <h3 class="form-header">Enter Details of User To remove</h3>
         <form action="removeuser" method="post">
             Select User Type:<select name="type">
                 <option value="null">---select User ---</option>
@@ -34,5 +35,6 @@
             Enter UserName: <input type="text" name="username" required><br/>
             <input type="submit" value="Submit">
         </form>
+        </div>
     </body>
 </html>

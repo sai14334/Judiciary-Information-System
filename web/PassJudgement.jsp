@@ -10,9 +10,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title> Judgement Page</title>
+                <link href="CSS/forms.css" rel="stylesheet" type="text/css">
+
     </head>
     <body>
-        <h2>Enter Judgement Details</h2>
+        <div class="form-container">
+            <h2 class="form-header">Enter Judgement Details</h2>
         <%
         response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0");
         response.setHeader("Cache-Control", "post-check=0, pre-check=0");
@@ -36,5 +39,6 @@
             <input type="date" name="judgedate">
             <input type="submit" value="Pass Judgement">
         </form>
+    </div>
     </body>
 </html>

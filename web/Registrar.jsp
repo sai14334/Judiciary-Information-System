@@ -4,10 +4,10 @@
     Author     : rguktrkvalley
 --%>
 
-<%@page import="Beans.Registrar"%>
-<%@page import="DaoClasses.UnRegisterRetriveDao"%>
+<%@page import="com.uprooters.beans.Registrar"%>
+<%@page import="com.uprooters.daoclasses.UnRegisterRetriveDao"%>
 <%@page import="java.util.List"%>
-<%@page import="Beans.Cases"%>
+<%@page import="com.uprooters.beans.Cases"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>

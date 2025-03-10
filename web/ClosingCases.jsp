@@ -4,8 +4,8 @@
     Author     : rguktrkvalley
 --%>
 
+<%@page import="com.uprooters.beans.Cases"%>
 <%@page import="java.util.List"%>
-<%@page import="Beans.Cases"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

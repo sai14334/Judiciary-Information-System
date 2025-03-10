@@ -10,42 +10,55 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>ADD User</title>
-        
+        <link href="CSS/forms.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <%
-            String Failed =null;
-            if(request.getAttribute("Failed")!=null){
-                Failed= (String)request.getAttribute("Failed");
-            
-        %><h2 style="color:red;"><%=Failed%></h2>
-        <%}%>
-        <h2>Add User Form</h2>
+        <div class="form-container">
+            <h1 class="form-header">Add User Form</h1>
 
-        <form action="adduser" method="post">
-            Select User Type:<select name="type">
-                <option value="null">---select User ---</option>
-                <option value="L">Lawyer</option>
-                <option value="J">Judge</option>
-                <option value="R">Registrar</option>
-                <option value="S">Station</option>
-            </select>  <br/> 
-            Enter UserName: <input type="text" name="username" required onclick="showAlert()"><br/> 
-            Enter Password:<input type="password" name="password" required><br/> 
-            Re-Enter Password:<input type="password" name="repass" required><br/> <!-- comment -->
-            Enter Email:<input type="email" name="email"><br/> 
-            Enter Full Name:<input type="text" name="name"><br/> <!-- comment -->
-            Enter Contact:<input type="tel" name="phone"><br/> 
-            <input type="submit" value="Submit">  
-        </form>
+            <% if (request.getAttribute("Failed") != null) { %>
+                <h2><%= (String) request.getAttribute("Failed") %></h2>
+            <% } %>
+
+            <form action="adduser" method="post">
+                <label for="type">Select User Type:</label>
+                <select name="type" id="type" required>
+                    <option value="null">--- Select User ---</option>
+                    <option value="L">Lawyer</option>
+                    <option value="J">Judge</option>
+                    <option value="R">Registrar</option>
+                    <option value="S">Station</option>
+                </select>
+
+                <label for="username">Enter Username:</label>
+                <input type="text" name="username" id="username" required onclick="showAlert()" placeholder="Enter username">
+
+                <label for="password">Enter Password:</label>
+                <input type="password" name="password" id="password" required placeholder="Enter password">
+
+                <label for="repass">Re-Enter Password:</label>
+                <input type="password" name="repass" id="repass" required placeholder="Re-enter password">
+
+                <label for="email">Enter Email:</label>
+                <input type="email" name="email" id="email" placeholder="Enter email address">
+
+                <label for="name">Enter Full Name:</label>
+                <input type="text" name="name" id="name" placeholder="Enter full name">
+
+                <label for="phone">Enter Contact:</label>
+                <input type="tel" name="phone" id="phone" placeholder="Enter contact number">
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
         <script type="text/javascript">
-            function showAlert(){
+            function showAlert() {
                 alert("Username Instructions:\n\
-        1. Username should not be Empty\n\
-        2.Username Must Be Unique\n\
-        3.Username must start with first letter of their Designation\n\
-        Ex:Laywer->L, Judge->J, Registrar->R, Station->S");
-                
+1. Username should not be empty.\n\
+2. Username must be unique.\n\
+3. Username must start with the first letter of their designation.\n\
+Ex: Lawyer -> L, Judge -> J, Registrar -> R, Station -> S");
             }
         </script>
     </body>
