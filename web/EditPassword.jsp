@@ -58,7 +58,7 @@
                 <label for="newpass">Enter New Password:</label>
                 <input type="password" name="newpass" id="newpass" required placeholder="Enter new password">
 
-                <label for="repass">Re-enter New Password:</label>
+                <label for="repass">Re-Enter New Password:</label>
                 <input type="password" name="repass" id="repass" required placeholder="Re-enter new password">
 
                 <input type="submit" value="Update Password">
